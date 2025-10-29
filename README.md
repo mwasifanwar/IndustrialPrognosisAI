@@ -1,25 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>IndustrialPrognosisAI</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; }
-        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
-        h2 { color: #34495e; margin-top: 30px; border-left: 4px solid #3498db; padding-left: 10px; }
-        h3 { color: #2c3e50; }
-        code { background: #f8f9fa; padding: 2px 6px; border-radius: 3px; font-family: 'Consolas', monospace; }
-        pre { background: #2c3e50; color: #ecf0f1; padding: 15px; border-radius: 5px; overflow-x: auto; }
-        .math { background: #f8f9fa; padding: 10px; margin: 10px 0; border-left: 4px solid #e74c3c; }
-        ul { padding-left: 20px; }
-        li { margin: 8px 0; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
-        .feature-card { background: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #3498db; }
-        .warning { background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 5px; margin: 15px 0; }
-    </style>
-</head>
-<body>
 
 <h1>IndustrialPrognosisAI</h1>
 
