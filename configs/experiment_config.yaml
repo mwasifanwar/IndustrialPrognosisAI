@@ -1,0 +1,65 @@
+# Experiment Configuration
+experiment:
+  name: "cmapps_rul_comprehensive"
+  description: "Comprehensive RUL prediction experiment on CMAPPS dataset"
+  version: "1.0"
+
+models:
+  - name: "AdvancedCNN"
+    config: "configs/cnn_config.yaml"
+    enabled: true
+  
+  - name: "LSTM"
+    config: "configs/lstm_config.yaml"
+    enabled: false
+  
+  - name: "Transformer"
+    config: "configs/transformer_config.yaml"
+    enabled: false
+
+hyperparameter_tuning:
+  enabled: true
+  framework: "optuna"
+  n_trials: 50
+  timeout: 3600
+  direction: "minimize"
+  metric: "val_rmse"
+
+  search_space:
+    learning_rate:
+      type: "float"
+      low: 0.0001
+      high: 0.01
+      log: true
+    batch_size:
+      type: "categorical"
+      choices: [16, 32, 64]
+    hidden_units:
+      type: "int"
+      low: 32
+      high: 256
+
+cross_validation:
+  enabled: true
+  folds: 5
+  strategy: "time_series"
+  test_size: 0.2
+
+evaluation:
+  metrics:
+    primary: "rmse"
+    secondary: ["mae", "mape", "r2"]
+  statistical_tests: true
+  confidence_intervals: true
+
+reporting:
+  generate_report: true
+  save_predictions: true
+  create_plots: true
+  interactive_plots: false
+
+mlflow:
+  tracking_uri: "logs/mlruns"
+  experiment_name: "cmapps_comprehensive"
+  log_artifacts: true
+  log_models: true
